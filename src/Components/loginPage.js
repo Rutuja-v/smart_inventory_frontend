@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 import { FaUserAlt, FaLock } from "react-icons/fa";
-import './loginPage.css';
+import "./loginPage.css";
 import {
   Flex,
   Heading,

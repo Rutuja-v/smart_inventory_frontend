@@ -4,16 +4,18 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
-
+import Button from '@mui/material/Button';
+import { Outlet, Link } from "react-router-dom";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
-import { Link } from "react-router-dom";
+
 // import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
 const Sidebar = () => {
 
   return (
+    <>
     <div className="sidebar">
       <div className="top">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -27,11 +29,11 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <HomeOutlinedIcon className="icon" />
+            <HomeOutlinedIcon className="icon"/>
             <span>Home</span>
           </li>
           <p className="title">SERVICE</p>
-          <Link to="./home/godowns" style={{ textDecoration: "none" }}>
+          <Link to="./godowns" style={{ textDecoration: "none" }}>
             <li>
             <StoreIcon className="icon" />
               <span>Godwons</span>
@@ -72,9 +74,14 @@ const Sidebar = () => {
             <span>Logout</span>
           </li>
         </ul>
+        {/* <Button variant="contained" disableElevation>
+        Disable elevation
+      </Button> */}
       </div>
       
     </div>
+    <Outlet />
+    </>
   );
 };
 

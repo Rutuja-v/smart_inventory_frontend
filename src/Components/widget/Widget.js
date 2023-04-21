@@ -1,25 +1,26 @@
 import "./widget.css";
 
 
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+// import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Widget = ({ type }) => {
   let data;
 
   //temporary
   const amount = 100;
-  const diff = 20;
+  // const diff = 20;
 
   switch (type) {
-    case "user":
+    case "Hydrabad":
       data = {
-        title: "USERS",
+        title: "Hydrabad",
         isMoney: false,
-        link: "See all users",
+        link: "See details",
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -31,11 +32,11 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "Cheenai":
       data = {
-        title: "ORDERS",
+        title: "Cheenai",
         isMoney: false,
-        link: "View all orders",
+        link: "View Products",
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
@@ -47,11 +48,11 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "earning":
+    case "Pune":
       data = {
-        title: "EARNINGS",
+        title: "Pune",
         isMoney: true,
-        link: "View net earnings",
+        link: "See details",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
@@ -60,9 +61,9 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "balance":
+    case "Bangolre":
       data = {
-        title: "BALANCE",
+        title: "Bangolre",
         isMoney: true,
         link: "See details",
         icon: (
@@ -89,13 +90,7 @@ const Widget = ({ type }) => {
         </span>
         <span className="link">{data.link}</span>
       </div>
-      <div className="right">
-        <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
-        </div>
-        {data.icon}
-      </div>
+     
     </div>
   );
 };
