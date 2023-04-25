@@ -5,8 +5,10 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
 import Button from '@mui/material/Button';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, Routes, Route } from "react-router-dom";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import Inwards from "../Inwards/Inwards";
+import { NavLink } from "react-router-dom";
 
 
 // import { DarkModeContext } from "../../context/darkModeContext";
@@ -16,6 +18,7 @@ const Sidebar = () => {
 
   return (
     <>
+  
     <div className="sidebar">
       <div className="top">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -26,6 +29,7 @@ const Sidebar = () => {
       </div>
       <hr />
       <div className="center">
+        {/* <nav> */}
         <ul>
           <p className="title">MAIN</p>
           <li>
@@ -33,7 +37,7 @@ const Sidebar = () => {
             <span>Home</span>
           </li>
           <p className="title">SERVICE</p>
-          <Link to="./godowns" style={{ textDecoration: "none" }}>
+          <Link to="/Godowns" style={{ textDecoration: "none" }}>
             <li>
             <StoreIcon className="icon" />
               <span>Godwons</span>
@@ -47,19 +51,26 @@ const Sidebar = () => {
             </li>
             </Link>
             <p className="title">USEFUL</p>
+            <Link to="/Inwards" style={{ textDecoration: "none" }}>
         
           <li>
             <CreditCardIcon className="icon" />
             <span>Inwards</span>
+
+
           </li>
+          </Link>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
+
+          <Link to="/Returns" style={{ textDecoration: "none" }}>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Returns</span>
           </li>
+          </Link>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Reports</span>
@@ -74,6 +85,7 @@ const Sidebar = () => {
             <span>Logout</span>
           </li>
         </ul>
+        {/* </nav> */}
         {/* <Button variant="contained" disableElevation>
         Disable elevation
       </Button> */}
@@ -81,6 +93,7 @@ const Sidebar = () => {
       
     </div>
     <Outlet />
+   
     </>
   );
 };

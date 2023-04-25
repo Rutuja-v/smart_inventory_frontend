@@ -1,0 +1,23 @@
+{
+    "Inwards": [
+      {
+        "id": 1,
+        "productCode": "P001",
+        "productName": "Product 1",
+        "quantity": 10
+      },
+      {
+        "id": 2,
+        "productCode": "P002",
+        "productName": "Product 2",
+        "quantity": 5
+      },
+      {
+        "id": 3,
+        "productCode": "P003",
+        "productName": "Product 3",
+        "quantity": 8
+      }
+    ]
+  }
+  
